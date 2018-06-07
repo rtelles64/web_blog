@@ -1,0 +1,23 @@
+<!-- Here we establish our frontend for our blog -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My New Blog</title>
+    <!-- Here we include the Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main.css') }}"/>
+    <!-- This links our base.html to main.css file -->
+    <!-- Note: This can only be done using Flask and Jinja -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Here we (MUST) also include the javascript CDN -->
+</head>
+<body>
+<!-- We use Jinja templating to create a template across all our files
+     Jinja is a language that simplies creation of HTML
+     Flask uses it for this purpose -->
+{% block content %}
+
+{% endblock %}
+</body>
+</html>
