@@ -1,0 +1,8 @@
+#login-form {
+    /* The hash tells us we are interacting with an element with id login-form */
+    margin-top: 25px;
+}
+
+.page-form { /* Period tells us that we are working with a class */
+    max-width: 480px;
+}
