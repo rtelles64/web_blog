@@ -1,0 +1,22 @@
+<!-- Note: our browser doesn't understand jinja -->
+<!-- Recall: By default, forms think they need to send data to themselves.
+     We actually want data to be sent elsewhere so we account for that -->
+<!-- We implement Bootstrap to standardize the forms a bit -->
+{% extends "base.html" %}
+{% block content %}
+<!-- Use a Post request instead of Get to hide the password info from the URL -->
+<div class = "container page-form"> <!-- formatted in main.css -->
+    <form id = "login-form" action = "/auth/login" method = "post">
+        <div class = "form-group">
+            <label for = "email">Email</label>
+            <input type = "text" id = "email" class = "form-control" name = "email">
+        </div>
+        <div class = "form-group">
+            <label for = "password">Password</label>
+            <input type = "password" id = "password" class = "form-control" name = "password">
+        </div>
+
+        <button type = "submit" class = "btn btn-success">Log In</button><!-- Success gives us a green button -->
+    </form>
+</div>
+{% endblock %}

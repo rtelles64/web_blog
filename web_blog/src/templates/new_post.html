@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Use a Post request instead of Get to hide the password info from the URL -->
+<div class = "container"> <!-- formatted in main.css -->
+    <form id = "new-post" action = "/posts/new/{{ blog_id }}" method = "post">
+        <div class = "form-group">
+            <label for = "title">Title</label>
+            <input type = "text" id = "title" class = "form-control" name = "title">
+        </div>
+        <div class = "form-group">
+            <label for = "content">Content</label>
+            <textarea id = "content" class = "form-control" name = "content"></textarea>
+        </div>
+
+        <button type = "submit" class = "btn btn-success">Publish</button>
+    </form>
+</div>
+{% endblock %}
